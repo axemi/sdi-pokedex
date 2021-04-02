@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './App.css';
 import PokemonList from './components/pokemonList';
@@ -20,9 +20,13 @@ right now -
 
   foreach pokemon => pokemon.other.dream_world.picture.svg
 */
-function App() {
+function App({history}) {
   return (
     <div className="App">
+      <nav>
+        <Link to="/"><button>Button 4000</button></Link>
+        <Link to="/About"><button>About</button></Link>
+      </nav>
       <Switch>
         <Route exact path="/" component={PokemonList}/>
         <Route exact path ="/pokemon/:id" component={PokemonInfoPage}/>

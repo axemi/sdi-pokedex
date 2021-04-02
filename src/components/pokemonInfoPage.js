@@ -30,7 +30,7 @@ const PokemonInfoPage = (props) => {
     return (
         <div id="pokemon-info">
             <h1>{state.pokemon.name}</h1>
-            <img src={state.pokemon.photo} alt="picture of a pokemon"/>
+            <img src={state.pokemon.photo} alt="a pokemon"/>
             <ul>
                 {state.pokemon.abilities.forEach(ability => {
                     return (
